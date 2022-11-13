@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Simple Plugin Header
+ * Plugin Name: CH1 - Simple Plugin Header
  * Plugin URI:
  * Description: Create a plugin visible in WordPress Admin interface
  * Version: 1.0

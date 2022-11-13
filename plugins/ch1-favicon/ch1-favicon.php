@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Chapter 2 - Favicon
+ * Plugin Name: CH1 - Favicon
  * Plugin URI:
  * Description: Add a website favicon
  * Version: 1.0
@@ -8,9 +8,9 @@
  * Author URI: https://maurobono.com
  * License: GPLv2
  */
-add_action('wp_head', 'ch2_add_favicon_in_header');
+add_action('wp_head', 'ch1_add_favicon_in_header');
 
-function ch2_add_favicon_in_header()
+function ch1_add_favicon_in_header()
 {
   // Check if user added a custom favicon via customizer
   $site_icon_url = get_site_icon_url();

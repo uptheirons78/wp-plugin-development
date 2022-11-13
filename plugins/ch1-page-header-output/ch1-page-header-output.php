@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Plugin Name: Chapter 2 - Page Header Output
+ * Plugin Name: CH1 - Page Header Output
  * Plugin URI:
  * Description: Output content in page Head
  * Version: 1.0
@@ -10,9 +10,9 @@
  * License: GPLv2
  */
 
-add_action('wp_head', 'ch2_page_header_output');
+add_action('wp_head', 'ch1_page_header_output');
 
-function ch2_page_header_output()
+function ch1_page_header_output()
 {
 ?>
   <script>
