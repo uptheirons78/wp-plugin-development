@@ -5,3 +5,4 @@
 2. Page Header Output (ch1-page-header-output);
 3. Add favicon (ch1-favicon);
 4. Edit the generator meta tag (ch1-generator-filter);
+5. Email page link to other people (ch1-email-page-link);
