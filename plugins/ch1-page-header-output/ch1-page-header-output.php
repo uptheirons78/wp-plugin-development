@@ -34,3 +34,32 @@ function ch1_page_header_output()
   </script>
 <?php
 }
+
+add_filter( 'the_content', 'ch1_link_filter_analytics' );
+
+function ch1_link_filter_analytics( $the_content )
+{
+ $new_content = str_replace( 'href', 'onClick="recordOutboundLink( this ); return false;" href', $the_content );
+ return $new_content;
+}
+
+add_action( 'wp_footer', 'ch1_footer_analytics_code' );
+
+function ch1_footer_analytics_code()
+{
+  ?>
+    <script type="text/javascript">
+      function recordOutboundLink(link) {
+        ga( 'send', 'event', 'Outbound Links',
+          'Click',
+          link.href, {
+            'transport': 'beacon',
+            'hitCallback': function() {
+              document.localtion = link.href;
+            }
+          }
+        )
+      }
+    </script>
+  <?php
+}
