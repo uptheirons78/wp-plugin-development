@@ -9,3 +9,4 @@
 6. Nav menu filter (ch1-nav-menu-filter);
 7. Twitter shortcode (ch1-twitter-shortcode);
 8. Twitter embed (ch1-twitter-embed);
+9. Private item text (ch1-private-item-text);
