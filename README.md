@@ -7,3 +7,4 @@
 4. Edit the generator meta tag (ch1-generator-filter);
 5. Email page link to other people (ch1-email-page-link);
 6. Nav menu filter (ch1-nav-menu-filter);
+7. Twitter shortcode (ch1-twitter-shortcode);
