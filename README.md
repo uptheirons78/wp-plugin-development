@@ -10,3 +10,4 @@
 7. Twitter shortcode (ch1-twitter-shortcode);
 8. Twitter embed (ch1-twitter-embed);
 9. Private item text (ch1-private-item-text);
+10. Private item text O.O.P. Version (ch1-oo-private-item-text);
