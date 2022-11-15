@@ -11,3 +11,6 @@
 8. Twitter embed (ch1-twitter-embed);
 9. Private item text (ch1-private-item-text);
 10. Private item text O.O.P. Version (ch1-oo-private-item-text);
+
+## Chapter 2
+1. Individual options (ch2-individual-options);
