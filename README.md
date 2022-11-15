@@ -15,3 +15,4 @@
 ## Chapter 2
 1. Individual options (ch2-individual-options);
 2. Page Header Output. Version 2 (ch2-page-header-output);
+3. Page Header Output. Version 3 (ch2-page-header-output-v3);
