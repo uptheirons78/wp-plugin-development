@@ -21,3 +21,4 @@
 6. Page Header Output. Version 5 (ch2-page-header-output-v5);
 7. Page Header Output. Version 6 (ch2-page-header-output-v6);
 8. Page Header Output. Version 7 (ch2-page-header-output-v7);
+9. Page Header Output. Version 8 (ch2-page-header-output-v8);
