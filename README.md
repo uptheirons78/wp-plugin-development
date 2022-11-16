@@ -19,3 +19,4 @@
 4. Page Header Output. Version 4 (ch2-page-header-output-v4);
 5. Multi Level Menu (ch2-multi-level-menu);
 6. Page Header Output. Version 5 (ch2-page-header-output-v5);
+7. Page Header Output. Version 6 (ch2-page-header-output-v6);
