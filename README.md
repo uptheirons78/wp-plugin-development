@@ -24,3 +24,4 @@
 9. Page Header Output. Version 8 (ch2-page-header-output-v8);
 10. Settings API (ch2-settings-api);
 11. Page Header Output. Version 9 (ch2-page-header-output-v9);
+11. Page Header Output. Metaboxes (ch2-page-header-output-metaboxes);
