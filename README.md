@@ -25,3 +25,6 @@
 10. Settings API (ch2-settings-api);
 11. Page Header Output. Version 9 (ch2-page-header-output-v9);
 11. Page Header Output. Metaboxes (ch2-page-header-output-metaboxes);
+
+## Chapter 3
+1. Book Review Post Type (ch3-book-reviews);
