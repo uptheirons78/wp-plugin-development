@@ -35,7 +35,7 @@ function ch3_br_create_book_post_type()
     'labels' => $labels,
     'public' => true,
     'menu_position' => 20,
-    'supports' => array( 'title', 'editor', 'comments', 'thumbnail', 'custom-fields' ),
+    'supports' => array( 'title', 'editor', 'comments', 'thumbnail' ),
     'taxonomies' => array( '' ),
     'menu_icon' => 'data:image/svg+xml;base64,' . base64_encode( $menu_icon ),
     'has_archive' => false,
@@ -46,4 +46,70 @@ function ch3_br_create_book_post_type()
   );
 
   register_post_type( 'book_reviews', $args );
+}
+
+add_action( 'admin_init', 'ch3_br_admin_init' );
+
+function ch3_br_admin_init()
+{
+  add_meta_box(
+    'ch3_br_review_details_meta_box',
+    'Book Review Details',
+    'ch3_br_display_review_details_mb',
+    'book_reviews',
+    'normal',
+    'high'
+  );
+}
+
+function ch3_br_display_review_details_mb( $book_review )
+{
+  $book_author = get_post_meta( $book_review->ID, 'book_author', true);
+  $book_rating = get_post_meta( $book_review->ID, 'book_rating', true);
+
+  ?>
+    <table>
+      <tr>
+        <td>Book Author</td>
+        <td><input type="text" style="width: 100%;" name="book_review_author_name" value="<?php echo esc_html( $book_author ); ?>"></td>
+      </tr>
+      <tr>
+        <td style="width: 150px;">Book Rating</td>
+        <td>
+          <select name="book_review_rating" style="width: 130px;">
+            <option value="">Select rating</option>
+            <?php for ( $rating = 5; $rating >= 1; $rating -- ) { ?>
+              <option value="<?php echo intval( $rating ); ?>" <?php echo selected( $rating, $book_rating ); ?>"><?php echo intval( $rating ); ?> stars</option>
+            <?php } ?>
+          </select>
+        </td>
+      </tr>
+    </table>
+  <?php
+}
+
+add_action( 'save_post', 'ch3_br_add_book_review_fields', 10, 2);
+
+function ch3_br_add_book_review_fields( $book_review_id, $book_review )
+{
+  if ( 'book_reviews' != $book_review->post_type ) {
+    return;
+  }
+
+  if ( isset( $_POST[ 'book_review_author_name' ] ) ) {
+    update_post_meta (
+      $book_review_id,
+      'book_author',
+      sanitize_text_field( $_POST['book_review_author_name'] )
+    );
+  }
+
+  if ( isset( $_POST[ 'book_review_rating' ] ) && !empty( $_POST['book_review_rating'] ) ) {
+    update_post_meta (
+      $book_review_id,
+      'book_rating',
+      intval( $_POST['book_review_rating'] )
+    );
+  }
+
 }

@@ -28,3 +28,4 @@
 
 ## Chapter 3
 1. Book Review Post Type (ch3-book-reviews);
+2. Book Review Post Type + Meta Box (ch3-book-reviews);
