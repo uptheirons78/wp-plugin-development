@@ -1,6 +1,6 @@
 <?php
 
-add_action( 'init', 'mbr_register_property_post_type' );
+add_action('init', 'mbr_register_property_post_type');
 
 function mbr_register_property_post_type()
 {
@@ -29,13 +29,13 @@ function mbr_register_property_post_type()
     'labels' => $labels,
     'public' => true,
     'menu_position' => 20,
-    'supports' => array( 'title', 'editor', 'thumbnail' ),
-    'taxonomies' => array( '' ),
+    'supports' => array('title', 'editor', 'thumbnail'),
+    'taxonomies' => array(''),
     'menu_icon' => 'dashicons-admin-home',
     'has_archive' => false,
     'exclude_from_search' => true,
-    'rewrite' => array( 'slug' => 'properties', 'with_front' => false),
+    'rewrite' => array('slug' => 'properties', 'with_front' => false),
   );
 
-  register_post_type( 'property', $args );
+  register_post_type('properties', $args);
 }

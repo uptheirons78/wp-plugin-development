@@ -21,3 +21,4 @@ define( 'MBREALTOR_PLUGIN_NAME', trim( dirname( MBREALTOR_PLUGIN_BASENAME ), '/'
 define( 'MBREALTOR_PLUGIN_DIR', untrailingslashit( dirname( MBREALTOR_PLUGIN ) ) );
 
 include_once MBREALTOR_PLUGIN_DIR . '/includes/property-post-type.php';
+include_once MBREALTOR_PLUGIN_DIR . '/includes/property-post-type-meta-boxes.php';
